@@ -70,13 +70,14 @@ class Forca extends Component{
         return(
             <div>
                 <h1> forca </h1>
-                    <label>Digite uma palavra: </label>
+                <span className='navbar-text text-primary'>Palpites errados: {this.state.erros}</span>
+                <label>Digite o nome de uma fruta </label>
 
-                    <p> {!gameOver ? this.guessedWord() : this.state.resposta}{" "} </p>
-                    <p>{teclado}</p>
+                <p> {!gameOver ? this.guessedWord() : this.state.resposta}{" "} </p>
+                <p>{teclado}</p>
 
-                    <p>Palavra sorteada: {this.state.resposta}</p>
-                    <p>{altText}</p>
+                <p>Palavra sorteada: {this.state.resposta}</p>
+                <p>{altText}</p>
                     
             </div>
             
