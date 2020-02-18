@@ -1,7 +1,12 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './carregaLista.css'
+
 import book1 from '../images/book1.png'
+import book2 from '../images/book2.png'
+import book3 from '../images/book3.png'
+import book4 from '../images/book4.png'
+import book5 from '../images/book5.png'
 
 class Card extends Component {
     constructor(props){
@@ -15,7 +20,8 @@ class Card extends Component {
             ano: '',
             situacao: '',
             preco: 0,
-            total: 0
+            total: 0,
+            indice: 0
         }
 
         this.onClick = this.onClick.bind(this)
@@ -23,7 +29,7 @@ class Card extends Component {
 
     componentWillMount(){
         const livro = this.props.livro
-
+        
         this.setState({
             imagem: livro.imagem,
             titulo: livro.titulo,
@@ -50,7 +56,7 @@ class Card extends Component {
     render(){
         return(
             <div className="card col-sm-3">
-                <img src={book1} className="imagem card-img-top align-self-center" alt=""/>
+                <img src={book2} className="imagem card-img-top align-self-center" alt=""/>
                 <div className="card-body">
                     <h5 className="card-title">{this.state.titulo}</h5>
                     <p className="card-text">{this.state.sinopse}</p>

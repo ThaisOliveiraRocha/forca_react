@@ -1,47 +1,74 @@
 [
     {
-        "imagem": "",
-        "titulo": "asfasdf",
-        "sinopse": "afadsfasdfasdfasd",
-        "autor": "eu",
-        "ano": "2020",
+        "imagem": "../images/book1.png",
+        "titulo": "É Assim Que Acaba",
+        "sinopse": "asdfasdfasdgasdfasdf",
+        "autor": "Colleen Hoover",
+        "ano": "2018",
         "situacao": "novo",
-        "preco": "10.00"
+        "preco": "40.00"
+    },
+    {
+        "imagem": "../../images/book2.png",
+        "titulo": "Tarde Demais",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "Colleen Hoover",
+        "ano": "2016",
+        "situacao": "usado",
+        "preco": "18.00"
+    },
+    {
+        "imagem": "./../images/book3.png",
+        "titulo": "Neuromancer",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "William Gibson",
+        "ano": "2010",
+        "situacao": "novo",
+        "preco": "32.90"
+    },
+    {
+        "imagem": "../images/book4.png",
+        "titulo": "It - A coisa",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "Stephen King",
+        "ano": "1990",
+        "situacao": "usado",
+        "preco": "29.50"
+    },
+    {
+        "imagem": "../images/book5.png",
+        "titulo": "Game of Thrones",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "George Martin",
+        "ano": "2000",
+        "situacao": "novo",
+        "preco": "25.00"
     },
     {
         "imagem": "../images/book1.png",
-        "titulo": "asfasdf",
-        "sinopse": "afadsfasdfasdfasd",
-        "autor": "eu",
-        "ano": "2020",
+        "titulo": "É Assim Que Acaba",
+        "sinopse": "asdfasdfasdgasdfasdf",
+        "autor": "Colleen Hoover",
+        "ano": "2018",
         "situacao": "novo",
-        "preco": "10.00"
+        "preco": "40.00"
     },
     {
-        "imagem": "../images/book1.png",
-        "titulo": "asfasdf",
+        "imagem": "../../images/book2.png",
+        "titulo": "Tarde Demais",
         "sinopse": "afadsfasdfasdfasd",
-        "autor": "eu",
-        "ano": "2020",
-        "situacao": "novo",
-        "preco": "10.00"
+        "autor": "Colleen Hoover",
+        "ano": "2016",
+        "situacao": "usado",
+        "preco": "18.00"
     },
     {
-        "imagem": "../images/book1.png",
-        "titulo": "asfasdf",
+        "imagem": "./../images/book3.png",
+        "titulo": "Neuromancer",
         "sinopse": "afadsfasdfasdfasd",
-        "autor": "eu",
-        "ano": "2020",
+        "autor": "William Gibson",
+        "ano": "2010",
         "situacao": "novo",
-        "preco": "10.00"
-    },
-    {
-        "imagem": "../images/book1.png",
-        "titulo": "asfasdf",
-        "sinopse": "afadsfasdfasdfasd",
-        "autor": "eu",
-        "ano": "2020",
-        "situacao": "novo",
-        "preco": "10.00"
+        "preco": "32.90"
     }
 ]
