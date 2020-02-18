@@ -9,7 +9,6 @@ class Livraria extends Component {
         return(
             <div className="">
                 <Header />
-
                 <CarregaLista />
             </div>
         )

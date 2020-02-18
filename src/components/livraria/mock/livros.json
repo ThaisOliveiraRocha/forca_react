@@ -1,53 +1,47 @@
 [
     {
         "imagem": "",
-        "titulo": "",
-        "sinopse": "",
-        "autor": "",
-        "ano": "",
-        "situacao": "",
-        "preco": ""
+        "titulo": "asfasdf",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "eu",
+        "ano": "2020",
+        "situacao": "novo",
+        "preco": "10.00"
     },
     {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
+        "imagem": "../images/book1.png",
+        "titulo": "asfasdf",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "eu",
+        "ano": "2020",
+        "situacao": "novo",
+        "preco": "10.00"
     },
     {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
+        "imagem": "../images/book1.png",
+        "titulo": "asfasdf",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "eu",
+        "ano": "2020",
+        "situacao": "novo",
+        "preco": "10.00"
     },
     {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
+        "imagem": "../images/book1.png",
+        "titulo": "asfasdf",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "eu",
+        "ano": "2020",
+        "situacao": "novo",
+        "preco": "10.00"
     },
     {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
-    },
-    {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
-    },
-    {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
-    },
-    {
-        "imagem": "",
-        "nome": "",
-        "sinopse": "",
-        "preco": ""
+        "imagem": "../images/book1.png",
+        "titulo": "asfasdf",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "eu",
+        "ano": "2020",
+        "situacao": "novo",
+        "preco": "10.00"
     }
 ]

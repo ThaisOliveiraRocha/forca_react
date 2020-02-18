@@ -9,7 +9,7 @@ class Header extends Component {
             <div>
                 <nav className="navbar navbar-light bg-light">
                     <a className="navbar-brand">
-                        <img src={logo} width="50" height="50" className="d-inline-block"/>
+                        <img src={logo} width="50" height="50" className="d-inline-block" alt=""/>
                         Livraria on-line
                     </a>
                 </nav>
