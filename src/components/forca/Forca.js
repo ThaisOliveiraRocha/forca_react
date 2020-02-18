@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import { randomWord } from './palavras/frutas';
+
+import './forca.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import step0 from "./images/0.jpg"
@@ -78,7 +80,7 @@ class Forca extends Component{
             teclado = "VOCÊ PERDEU"
 
         return(
-            <div className='Hangman'>
+            <div className='Hangman container'>
                 <nav className='navbar navbar-light justify-content-between'>
                     <p className='navbar-brand text-light'>
                         Jogo da Forca
