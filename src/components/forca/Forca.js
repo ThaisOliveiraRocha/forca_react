@@ -81,7 +81,7 @@ class Forca extends Component{
             <div className='Hangman'>
                 <nav className='navbar navbar-light justify-content-between'>
                     <p className='navbar-brand text-light'>
-                        Forca
+                        Jogo da Forca
                     </p>
                     <p className='navbar-brand text-light'>
                         Palpites errados: {this.state.erros}
@@ -94,7 +94,6 @@ class Forca extends Component{
                 <p className='Hangman-word text-center'> 
                     {!gameOver ? this.guessedWord() : this.state.resposta}{" "} 
                 </p>
-
                 <p className='text-center text-warning mt-4'>{teclado}</p>
             </div>
         );
