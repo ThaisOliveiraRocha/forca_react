@@ -1,5 +1,19 @@
+.corpo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .imagem{
     width: 15em;
     align-self: 'center';
     margin-top: 2em
+}
+
+.card{
+    margin: 2em;
+}
+
+.btn{
+    width: 15em;
 }
