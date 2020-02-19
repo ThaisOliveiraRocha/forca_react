@@ -1,0 +1,36 @@
+.livraria {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: stretch;
+}
+
+.navbar {
+    justify-content: start;
+    background-color: #c2d6d6;
+}
+
+.corpo_header {
+    margin-left: 3em;
+}
+
+.circulo {
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle closest-side,
+     #ffffff 0%,#ffffff 87%, #003d99 96%,#003d99 99%,rgba(0,0,0,0) 100%);
+}
+
+.imagemLogo{
+    width: 60px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.texto {
+    margin-left: 0.5em;
+    font-size: 3.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #003d99;
+    font-weight: bold;
+}

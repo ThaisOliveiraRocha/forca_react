@@ -1,0 +1,15 @@
+.card {
+    font-family: sans-serif;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.btn {
+    background-color: #003d99;
+    color: white;
+    font-weight: 400;
+}

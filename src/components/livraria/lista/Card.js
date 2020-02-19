@@ -1,12 +1,6 @@
 import React, {Component} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './carregaLista.css'
-
-import book1 from '../images/book1.png'
-import book2 from '../images/book2.png'
-import book3 from '../images/book3.png'
-import book4 from '../images/book4.png'
-import book5 from '../images/book5.png'
+import './card.css'
 
 class Card extends Component {
     constructor(props){
@@ -62,15 +56,18 @@ class Card extends Component {
                 <img src={this.state.imagem} className="imagem card-img-top align-self-center" alt=""/>
                 <div className="card-body">
                     <h5 className="card-title">{this.state.titulo}</h5>
-                    <p className="card-text">{this.state.sinopse}</p>
                 </div>
-                <ul className="list-group list-group-flush">
+                <ul className="list-group list-group-flux">
                     <li className="list-group-item">{this.state.autor}</li>
-                    <li className="list-group-item">{this.state.ano} e {this.state.situacao}</li>
-                    <li className="list-group-item" ref="preco" value={this.state.preco}>{this.state.preco}</li>
+                    <li className="list-group-item">{this.state.ano}</li>
+                    <li className="list-group-item">{this.state.sinopse}</li>
+                </ul>
+                <ul className="list-group list-group-horizontal align-item-streach">
+                    <li className="list-group-item" ref="preco" value={this.state.preco}>R$ {this.state.preco}</li>
+                    <li className="list-group-item">{this.state.situacao}</li>
                 </ul>
                 <div className="card-body align-self-center">
-                    <button className="btn btn-primary" type="submit" onClick={this.onClick}>Comprar</button>
+                    <button className="btn" type="submit" onClick={this.onClick}>Comprar</button>
                 </div>
             </div>
         )
