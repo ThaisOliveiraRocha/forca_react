@@ -1,6 +1,6 @@
 [
     {
-        "imagem": "../images/book1.png",
+        "imagem": "book1.png",
         "titulo": "É Assim Que Acaba",
         "sinopse": "asdfasdfasdgasdfasdf",
         "autor": "Colleen Hoover",
@@ -9,7 +9,7 @@
         "preco": "40.00"
     },
     {
-        "imagem": "../../images/book2.png",
+        "imagem": "book2.png",
         "titulo": "Tarde Demais",
         "sinopse": "afadsfasdfasdfasd",
         "autor": "Colleen Hoover",
@@ -18,7 +18,7 @@
         "preco": "18.00"
     },
     {
-        "imagem": "./../images/book3.png",
+        "imagem": "book3.png",
         "titulo": "Neuromancer",
         "sinopse": "afadsfasdfasdfasd",
         "autor": "William Gibson",
@@ -27,7 +27,7 @@
         "preco": "32.90"
     },
     {
-        "imagem": "../images/book4.png",
+        "imagem": "book4.png",
         "titulo": "It - A coisa",
         "sinopse": "afadsfasdfasdfasd",
         "autor": "Stephen King",
@@ -36,7 +36,7 @@
         "preco": "29.50"
     },
     {
-        "imagem": "../images/book5.png",
+        "imagem": "book5.png",
         "titulo": "Game of Thrones",
         "sinopse": "afadsfasdfasdfasd",
         "autor": "George Martin",
@@ -45,7 +45,7 @@
         "preco": "25.00"
     },
     {
-        "imagem": "../images/book1.png",
+        "imagem": "book1.png",
         "titulo": "É Assim Que Acaba",
         "sinopse": "asdfasdfasdgasdfasdf",
         "autor": "Colleen Hoover",
@@ -54,7 +54,7 @@
         "preco": "40.00"
     },
     {
-        "imagem": "../../images/book2.png",
+        "imagem": "book2.png",
         "titulo": "Tarde Demais",
         "sinopse": "afadsfasdfasdfasd",
         "autor": "Colleen Hoover",
@@ -63,7 +63,7 @@
         "preco": "18.00"
     },
     {
-        "imagem": "./../images/book3.png",
+        "imagem": "book3.png",
         "titulo": "Neuromancer",
         "sinopse": "afadsfasdfasdfasd",
         "autor": "William Gibson",

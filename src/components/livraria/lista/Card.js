@@ -29,9 +29,10 @@ class Card extends Component {
 
     componentWillMount(){
         const livro = this.props.livro
-        
+        let book = livro.imagem
+
         this.setState({
-            imagem: livro.imagem,
+            imagem: require('../images/'+book),
             titulo: livro.titulo,
             sinopse: livro.sinopse,
             autor: livro.autor,
@@ -54,9 +55,11 @@ class Card extends Component {
     }
 
     render(){
+        console.log(this.props.livro.imagem)
+
         return(
             <div className="card col-sm-3">
-                <img src={book2} className="imagem card-img-top align-self-center" alt=""/>
+                <img src={this.state.imagem} className="imagem card-img-top align-self-center" alt=""/>
                 <div className="card-body">
                     <h5 className="card-title">{this.state.titulo}</h5>
                     <p className="card-text">{this.state.sinopse}</p>
