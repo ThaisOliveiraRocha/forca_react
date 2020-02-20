@@ -15,13 +15,19 @@ class Card extends Component {
             situacao: '',
             preco: 0,
             total: 0,
-            indice: 0
+            qtd_livros: 0,
+            carrinho: [{
+                nome_livro: '',
+                valor: 0
+            }]
         }
 
+        this.qtd_livrosAdd = 0
+        this.livros = []
         this.onClick = this.onClick.bind(this)
     }
 
-    componentWillMount(){
+    UNSAFE_componentWillMount(){
         const livro = this.props.livro
         let book = livro.imagem
 
@@ -37,39 +43,37 @@ class Card extends Component {
     }
 
     onClick(){
-        let atual = this.state.total
-        let soma = 0
-        soma = atual + this.refs.preco.value
+        let titulo = this.state.titulo
+        let preco = this.state.preco
 
-        this.setState({
-           total: soma
-        })
+        let vet_livros = JSON.parse(localStorage.getItem('livros'))
+        if(vet_livros)
+            vet_livros[vet_livros.length] = {titulo: titulo, valor: preco}
+        else
+            vet_livros = [{titulo: titulo, valor: preco}]
 
-        console.log(this.state.total)
+        localStorage.setItem('livros', JSON.stringify(vet_livros))
     }
 
-    render(){
-        console.log(this.props.livro.imagem)
-
+    render(){ 
         return(
             <div className="card col-sm-3">
                 <img src={this.state.imagem} className="imagem card-img-top align-self-center" alt=""/>
                 <div className="card-body">
-                    <h5 className="card-title">{this.state.titulo}</h5>
+                    <h5 className="card-title" ref="titulo">{this.state.titulo}</h5>
                 </div>
                 <ul className="list-group list-group-flux">
                     <li className="list-group-item">{this.state.autor}</li>
                     <li className="list-group-item">{this.state.ano}</li>
                     <li className="list-group-item">{this.state.sinopse}</li>
-                </ul>
-                <ul className="list-group list-group-horizontal align-item-streach">
-                    <li className="list-group-item" ref="preco" value={this.state.preco}>R$ {this.state.preco}</li>
+
+                    <li className="list-group-item" ref="preco">R$ {this.state.preco}</li>
                     <li className="list-group-item">{this.state.situacao}</li>
                 </ul>
                 <div className="card-body align-self-center">
                     <button className="btn" type="submit" onClick={this.onClick}>Comprar</button>
                 </div>
-            </div>
+            </div>            
         )
     }
 }

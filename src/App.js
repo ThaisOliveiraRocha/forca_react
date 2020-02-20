@@ -5,6 +5,7 @@ import Home from './components/home/Home'
 import ListaItens from './components/listaItens/ListaItens'
 import Forca from './components/forca/Forca'
 import Livraria from './components/livraria/Livraria'
+import Carrinho from './components/livraria/Carrinho'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
             <Route path="/lista" component={ListaItens} />
             <Route path="/forca" component={Forca} />
             <Route path="/livraria" component={Livraria} />
+            <Route path="/carrinho" component={Carrinho} />
         </Switch>
       </ BrowserRouter>
     );

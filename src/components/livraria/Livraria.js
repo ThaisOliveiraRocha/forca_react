@@ -8,9 +8,11 @@ import './livraria.css'
 class Livraria extends Component {
     render(){
         return(
-            <div className="livraria">
+            <div className="livraria_todo">
                 <Header />
-                <CarregaLista />
+                <div className="livraria">
+                    <CarregaLista />
+                </div>
             </div>
         )
     }
