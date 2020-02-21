@@ -6,36 +6,77 @@ class Carrinho extends Component {
         super(props)
 
         this.state = {
-            titulo: '',
-            valor: 0,
+            vet_carrinho: [{
+                titulo: '',
+                valor: 0,
+            }],
             total_compra: 0
         }
+
+        this.montarTabela = this.montarTabela.bind(this)
     }
 
     componentWillMount(){
         let vet_livros = []
+        let carrinho = [{
+            livro: '',
+            preco: ''
+        }]
         vet_livros = JSON.parse(localStorage.getItem('livros'))
         let soma = 0
         
         for(let index = 0; index < vet_livros.length; index++){
-            soma += parseFloat(vet_livros[index].valor)   
-            console.log("valor: " + vet_livros[index].valor + "soma atual" + soma)
+            carrinho[index] = {
+                titulo: vet_livros[index].titulo,
+                preco: vet_livros[index].valor
+            }
+            
+            console.log("titulo=> " + carrinho[index].titulo + " preco==> " + carrinho[index].preco)
+            soma += parseFloat(vet_livros[index].valor)
         }
 
         this.setState({
+            vet_carrinho: carrinho,
             total_compra: soma
         })
+    }
+
+    montarTabela(){
+        console.log(this.state.vet_carrinho)
+        const vet_itensCarrinho = this.state.vet_carrinho
+        
+        for(let index= 0; index < vet_itensCarrinho; index++){
+            console.log("titulo: " + vet_itensCarrinho[index].titulo + " preco: " + vet_itensCarrinho[index].preco)
+        }
     }
 
     render() {
         return(
             <div className="">
                 <Header />
-                <div>
-                    <ul className="list-group">
-                        <li className="list-group-item" >Titulos</li>
-                        <li className="list-group-item">Total da compra: {this.state.total_compra}</li>
-                    </ul>
+                <div className="container">
+                    <div className="form">
+                        <div className="rol">
+                            <div className="col">
+                                Titulo
+                            </div>
+                            <div className="col">
+                                Preco
+                            </div>
+                            <div className="col">
+                                <button type="button" className="btn btn-danger" name="excluir" onClick={this.montarTabela}>
+                                    X
+                                </button>
+                            </div>
+                        </div>
+                        <div className="rol">
+                            <div className="col">
+                                <span>
+                                    Total da compra: {this.state.total_compra}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
