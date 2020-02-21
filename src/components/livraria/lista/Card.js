@@ -53,6 +53,7 @@ class Card extends Component {
             vet_livros = [{titulo: titulo, valor: preco}]
 
         localStorage.setItem('livros', JSON.stringify(vet_livros))
+        this.props.func(vet_livros.length)
     }
 
     render(){ 
@@ -65,13 +66,18 @@ class Card extends Component {
                 <ul className="list-group list-group-flux">
                     <li className="list-group-item">{this.state.autor}</li>
                     <li className="list-group-item">{this.state.ano}</li>
-                    <li className="list-group-item">{this.state.sinopse}</li>
+                    <a href="#" className="list-group-item list-group-item-action">
+                        <div className="d-flex w-100 justify-content-between">
+                            <h5 className="text-muted">Sinopse</h5>
+                        </div>
+                        <p className="text-muted">{this.state.sinopse}</p>
+                    </a>
 
                     <li className="list-group-item" ref="preco">R$ {this.state.preco}</li>
                     <li className="list-group-item">{this.state.situacao}</li>
                 </ul>
                 <div className="card-body align-self-center">
-                    <button className="btn" type="submit" onClick={this.onClick}>Comprar</button>
+                    <button className="btn btn_card" type="submit" onClick={this.onClick}>Comprar</button>
                 </div>
             </div>            
         )

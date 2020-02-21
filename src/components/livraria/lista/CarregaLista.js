@@ -13,7 +13,8 @@ class CarregaLista extends Component {
                 {Livros.map((livro, index) => 
                     <Card
                         livro={livro}
-                        key={index} />
+                        key={index}
+                        func={this.props.func} />
                 )}
             </div>
         )

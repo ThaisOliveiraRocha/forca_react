@@ -6,12 +6,24 @@ import CarregaLista from './lista/CarregaLista'
 import './livraria.css'
 
 class Livraria extends Component {
+    constructor(){
+        super()
+        this.state = {
+            header: {},
+        }
+    }
+    componentDidMount(){
+        const header = this.refs.header;
+        this.setState({
+            header: header
+        })
+    }
     render(){
         return(
             <div className="livraria_todo">
-                <Header />
-                <div className="livraria">
-                    <CarregaLista />
+                <Header ref='header' />
+                <div className="livraria">                    
+                    <CarregaLista func={this.state.header.atualizarQtdCarrinho}/>
                 </div>
             </div>
         )

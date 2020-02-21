@@ -26,6 +26,7 @@
 .coluna_carrinho {
     align-self: center;
     margin-right: 5em;
+    margin-top: 1em;
 }
 
 .carrinho{
@@ -76,4 +77,8 @@ a:link, a:visited, a:hover{
     font-weight: 500;
     color: #ffffff;
     align-self: center;
+}
+
+.badge {
+    margin-left: 1em;
 }
