@@ -16,11 +16,10 @@ class Carrinho extends Component {
         vet_livros = JSON.parse(localStorage.getItem('livros'))
         let soma = 0
         
-        if(vet_livros.length > 0){
-            for(let index = 0; index <= vet_livros.length; index++){
-                soma += parseFloat(vet_livros[index].valor)   
-                console.log("valor: " + vet_livros[index].valor + "soma atual" + soma)
-            }
+        
+        for(let index = 0; index < vet_livros.length; index++){
+            soma += parseFloat(vet_livros[index].valor)   
+            console.log("valor: " + vet_livros[index].valor + "soma atual" + soma)
         }
 
         this.setState({
