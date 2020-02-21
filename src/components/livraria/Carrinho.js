@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Header from './header/Header'
 
 class Carrinho extends Component {
     constructor(props){
@@ -29,11 +30,14 @@ class Carrinho extends Component {
 
     render() {
         return(
-            <div className="container">
-                <ul className="list-group">
-                    <li className="list-group-item" >Titulos</li>
-                    <li className="list-group-item">Total da compra: {this.state.total_compra}</li>
-                </ul>
+            <div className="">
+                <Header />
+                <div>
+                    <ul className="list-group">
+                        <li className="list-group-item" >Titulos</li>
+                        <li className="list-group-item">Total da compra: {this.state.total_compra}</li>
+                    </ul>
+                </div>
             </div>
         )
     }

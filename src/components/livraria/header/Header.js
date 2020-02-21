@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {Link} from 'react-router-dom'
 
 import '../livraria.css'
-import logo from './../images/logo.png'
+import book from './../images/book_novo.svg'
+
+
 import carrinho from '../images/carrinho_mercado.png'
 
 class Header extends Component {
@@ -12,8 +14,8 @@ class Header extends Component {
             <div className="corpo_header">
                 <div className="row">
                     <div className="col-1">
-                        <div className="circulo">
-                            <img src={logo} className="imagemLogo" alt=""/>
+                        <div className="">
+                            <img src={book} className="imagemLogo" alt=""/>
                         </div>
                     </div>
                     <div className="col-6 coluna_txt">

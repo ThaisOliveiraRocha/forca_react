@@ -20,6 +20,7 @@
 
 .coluna_txt{
     align-self: center;
+    margin-top: 1em;
 }
 
 .coluna_carrinho {
@@ -45,9 +46,9 @@
 }
 
 .imagemLogo{
-    width: 60px;
-    margin-top: 25px;
-    margin-left: 20px;
+    width: 6em;
+    margin-top: 1em;
+    margin-left: 2em;
 }
 
 .img_carrinho{
@@ -70,11 +71,9 @@ a:link, a:visited, a:hover{
 }
 
 .texto {
-    margin-left: 0.5em;
     font-size: 3.5em;
     font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
     font-weight: 500;
     color: #ffffff;
-
     align-self: center;
 }
