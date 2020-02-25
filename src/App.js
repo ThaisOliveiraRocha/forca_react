@@ -5,7 +5,7 @@ import Home from './components/home/Home'
 import ListaItens from './components/listaItens/ListaItens'
 import Forca from './components/forca/Forca'
 import Livraria from './components/livraria/Livraria'
-import Carrinho from './components/livraria/Carrinho'
+import Carrinho from './components/livraria/carrinho/Carrinho'
 import PrivateRoute from './routes/PrivateRoute'
 
 const App = () => (

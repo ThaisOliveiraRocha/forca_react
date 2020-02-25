@@ -70,5 +70,32 @@
         "ano": "2010",
         "situacao": "novo",
         "preco": "32.90"
+    },
+    {
+        "imagem": "book4.png",
+        "titulo": "It - A coisa",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "Stephen King",
+        "ano": "1990",
+        "situacao": "usado",
+        "preco": "29.50"
+    },
+    {
+        "imagem": "book5.png",
+        "titulo": "Game of Thrones",
+        "sinopse": "afadsfasdfasdfasd",
+        "autor": "George Martin",
+        "ano": "2000",
+        "situacao": "novo",
+        "preco": "25.00"
+    },
+    {
+        "imagem": "book1.png",
+        "titulo": "É Assim Que Acaba",
+        "sinopse": "asdfasdfasdgasdfasdf",
+        "autor": "Colleen Hoover",
+        "ano": "2018",
+        "situacao": "novo",
+        "preco": "40.00"
     }
 ]

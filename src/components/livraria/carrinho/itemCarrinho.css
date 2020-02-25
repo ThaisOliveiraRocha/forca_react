@@ -1,0 +1,16 @@
+.itemCarrinho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo {
+    align-self: flex-start;
+}
+
+.quantidade {
+    align-self: center;
+}
+
+.valor {
+    align-self: flex-end;
+}
