@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Header from '../header/Header'
 import ItemCarrinho from '../carrinho/ItemCarrinho'
+import './itemCarrinho.css'
 
 class Carrinho extends Component {
     constructor(props){
@@ -13,6 +14,8 @@ class Carrinho extends Component {
             }],
             total_compra: 0
         }
+
+        this.onClick = this.onClick.bind(this)
     }
 
     componentWillMount(){
@@ -38,25 +41,35 @@ class Carrinho extends Component {
         })
     }
 
+    onClick() {
+        alert('Compra finalizada com sucesso! ')
+    }
+
     render() {
         return(
             <div className="">
                 <Header />
                 <div className="container">
                     <div className="form">
-                        {
-                            this.state.vet_carrinho.map((item, index) => 
-                                <ItemCarrinho
-                                    item={item}
-                                    key={index}
-                                />
-                            )
-                        }
-                        <div className="rol">
-                            <div className="col">
+                        <div className="rol linhaItem">
+                            {
+                                this.state.vet_carrinho.map((item, index) => 
+                                    <ItemCarrinho
+                                        item={item}
+                                        key={index}
+                                    />
+                                )
+                            }
+
+                            <div className="col colunaSoma">
                                 <span>
                                     Total da compra: {this.state.total_compra}
                                 </span>
+                            </div>
+                            <div className="col colunaBotao">
+                                <button type="button" className="btn btn-success" onClick={this.onClick}>
+                                    Finalizar compra
+                                </button>
                             </div>
                         </div>
                     </div>

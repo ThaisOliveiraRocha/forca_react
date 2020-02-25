@@ -1,16 +1,41 @@
-.itemCarrinho {
+.container {
+    margin-top: 5em;
+}
+
+.form {
+    display: flex;
+}
+
+.colunaItem {
     display: flex;
     justify-content: space-between;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    align-items: center;
 }
 
-.titulo {
-    align-self: flex-start;
+.linhaItem {
+    width: 100%;
 }
 
-.quantidade {
-    align-self: center;
+.campo {
+    font-weight: bold;
+    font-size: 3em;
 }
 
-.valor {
-    align-self: flex-end;
+.textoItem {
+    font-weight: 500;
+    font-size: 1.8em;
+}
+
+.colunaSoma {
+    text-align: right;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.colunaBotao {
+    text-align: right;
 }
