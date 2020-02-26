@@ -1,25 +1,29 @@
-.container {
-    margin-top: 5em;
-}
+/* .container {
+    flex: 1;
+    align-items: flex-start; 
+    width: 100%;
+} */
 
-.form {
-    display: flex;
-}
+/* .form {
+    
+} */
 
 .colunaItem {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
 
     margin-top: 1em;
     margin-bottom: 1em;
 
-    align-items: center;
+    align-items: center; */
 }
 
 .linhaItem {
-    width: 100%;
+    flex: 1;
+    align-items: center;
 }
 
+/* 
 .campo {
     font-weight: bold;
     font-size: 3em;
@@ -38,4 +42,4 @@
 
 .colunaBotao {
     text-align: right;
-}
+} */

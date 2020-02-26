@@ -49,7 +49,7 @@ class Carrinho extends Component {
         return(
             <div className="">
                 <Header />
-                <div className="container">
+                <div className="">
                     <div className="form">
                         <div className="rol linhaItem">
                             {
