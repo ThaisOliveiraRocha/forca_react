@@ -4,22 +4,18 @@ import './itemCarrinho.css'
 class ItemCarrinho extends Component {
     render(){
         return(
-            <div className="col colunaItem">
-                <span className="campo">
-                    Titulo
-                </span>
-                <span className="textoItem">
+            <div className="item list-group-item">
+                <div className="titulo">
                     {this.props.item.titulo}
-                </span>
-                <span className="campo">
-                    Preço
-                </span>
-                <span className="textoItem">
+                </div>
+                <div className="preco">
                     {this.props.item.preco}
-                </span>
-                <button type="button" className="btn btn-danger" name="excluir">
-                    remover
-                </button>
+                </div>
+                <div className="btnRemover">
+                    <button type="button" className="btn btn-danger" name="removerItem">
+                        remover
+                    </button>
+                </div>
             </div>
         )
     }

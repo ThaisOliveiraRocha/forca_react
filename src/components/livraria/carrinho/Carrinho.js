@@ -42,36 +42,35 @@ class Carrinho extends Component {
     }
 
     onClick() {
-        alert('Compra finalizada com sucesso! ')
+        alert('Compra finalizada com sucesso!')
     }
 
     render() {
         return(
-            <div className="">
-                <Header />
-                <div className="">
-                    <div className="form">
-                        <div className="rol linhaItem">
-                            {
-                                this.state.vet_carrinho.map((item, index) => 
-                                    <ItemCarrinho
-                                        item={item}
-                                        key={index}
-                                    />
-                                )
-                            }
-
-                            <div className="col colunaSoma">
-                                <span>
-                                    Total da compra: {this.state.total_compra}
-                                </span>
-                            </div>
-                            <div className="col colunaBotao">
-                                <button type="button" className="btn btn-success" onClick={this.onClick}>
-                                    Finalizar compra
-                                </button>
-                            </div>
-                        </div>
+            <div className="componente">
+                <div className="header">
+                    <Header />
+                </div>
+                <div className="corpoCarrinho list-group">
+                    {
+                        this.state.vet_carrinho.map((item, index) => 
+                            <ItemCarrinho
+                                item={item}
+                                key={index}
+                            />
+                        )
+                    }
+                </div>
+                <div className="footer">
+                    <div className="textoTotal">
+                        <span>
+                            Total da compra: {this.state.total_compra}
+                        </span>
+                    </div>
+                    <div className="btnFinalizar">
+                        <button type="button" className="btn btn-success" onClick={this.onClick}>
+                            Finalizar compra
+                        </button>
                     </div>
                 </div>
             </div>

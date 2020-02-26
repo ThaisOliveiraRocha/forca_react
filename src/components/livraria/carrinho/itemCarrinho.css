@@ -1,45 +1,46 @@
-/* .container {
-    flex: 1;
-    align-items: flex-start; 
+html, body {
     width: 100%;
-} */
-
-/* .form {
-    
-} */
-
-.colunaItem {
-    /* display: flex;
-    justify-content: space-between;
-
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-    align-items: center; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: khaki;
 }
 
-.linhaItem {
-    flex: 1;
+.componente {
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: 30vh 50vh 20vh;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.corpoCarrinho {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.footer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    text-align: right;
+}
+
+.item {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    width: 100%;
 }
 
-/* 
-.campo {
-    font-weight: bold;
-    font-size: 3em;
+.textoTotal {
+    
 }
-
-.textoItem {
-    font-weight: 500;
-    font-size: 1.8em;
-}
-
-.colunaSoma {
-    text-align: right;
-    font-weight: bold;
-    font-size: 3em;
-}
-
-.colunaBotao {
-    text-align: right;
-} */
