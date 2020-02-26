@@ -15,7 +15,8 @@ class Carrinho extends Component {
             total_compra: 0
         }
 
-        this.onClick = this.onClick.bind(this)
+        this.onClickFinalizar = this.onClickFinalizar.bind(this)
+        this.onClickCancelar = this.onClickCancelar.bind(this)
     }
 
     componentWillMount(){
@@ -41,8 +42,15 @@ class Carrinho extends Component {
         })
     }
 
-    onClick() {
+    onClickFinalizar() {
         alert('Compra finalizada com sucesso!')
+    }
+
+    onClickCancelar() {
+        alert('Compra cancelada!')
+
+        localStorage.removeItem('livros')
+        window.location.href = '/livraria'
     }
 
     render() {
@@ -64,12 +72,15 @@ class Carrinho extends Component {
                 <div className="footer">
                     <div className="textoTotal">
                         <span>
-                            Total da compra: {this.state.total_compra}
+                            Total da compra: R${this.state.total_compra}
                         </span>
                     </div>
-                    <div className="btnFinalizar">
-                        <button type="button" className="btn btn-success" onClick={this.onClick}>
-                            Finalizar compra
+                    <div className="">
+                        <button type="button" className="btn btnOperacao btn-success" onClick={this.onClickFinalizar}>
+                            Finalizar
+                        </button>
+                        <button type="button" className="btn btnOperacao btn-danger" onClick={this.onClickCancelar}>
+                            Cancelar
                         </button>
                     </div>
                 </div>

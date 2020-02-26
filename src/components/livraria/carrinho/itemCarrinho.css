@@ -9,7 +9,7 @@ html, body {
 .componente {
     display: grid;
     grid-template-columns: 3fr 4fr 3fr;
-    grid-template-rows: 30vh 50vh 20vh;
+    grid-template-rows: 20vh 40vh 40vh;
 }
 
 .header {
@@ -39,8 +39,35 @@ html, body {
     flex-direction: row;
 
     width: 100%;
+
+    font-size: 1.2em;
+}
+
+.titulo {
+    width: 40%;
+}
+
+.preco {
+    width: 30%;
+}
+
+.btnLista {
+    width: 20%;
 }
 
 .textoTotal {
-    
+    font-size: 1.2em;
+}
+
+.btnLista {
+    text-align: right;
+}
+
+.btnFuncao {
+    width: 2em;
+    margin-left: 1em;
+}
+
+.btnOpercao {
+    margin-right: 1em;
 }

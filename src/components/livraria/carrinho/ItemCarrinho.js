@@ -9,11 +9,14 @@ class ItemCarrinho extends Component {
                     {this.props.item.titulo}
                 </div>
                 <div className="preco">
-                    {this.props.item.preco}
+                    R${this.props.item.preco}
                 </div>
-                <div className="btnRemover">
-                    <button type="button" className="btn btn-danger" name="removerItem">
-                        remover
+                <div className="btnLista">
+                    <button type="button" className="btn btnFuncao btn-success" name="addItem">
+                        +
+                    </button>
+                    <button type="button" className="btn btnFuncao btn-danger" name="removerItem">
+                        -
                     </button>
                 </div>
             </div>
