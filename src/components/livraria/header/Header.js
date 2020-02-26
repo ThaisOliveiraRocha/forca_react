@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom'
 
 import '../livraria.css'
 import book from './../images/book_novo.svg'
-
-
 import carrinho from '../images/carrinho_mercado.png'
+
+const livros = JSON.parse(localStorage.getItem('livros'))
 
 class Header extends Component {
     constructor (props){
@@ -17,10 +17,11 @@ class Header extends Component {
         }
 
         this.atualizarQtdCarrinho = this.atualizarQtdCarrinho.bind(this);
+        this.onClick = this.onClick.bind(this)
     }
 
     componentDidMount(){
-        const vet_carrinho = JSON.parse(localStorage.getItem('livros'))
+        const vet_carrinho = livros
         let tam = 0
 
         if(vet_carrinho)
@@ -38,6 +39,13 @@ class Header extends Component {
         })
     }
 
+    onClick() {
+        if(this.state.qtd_carrinho > 0)
+            window.location.href = '/carrinho'
+        else
+            window.location.href = '/livraria'
+    }
+
     render(){
         return(
             <div className="corpo_header">
@@ -53,7 +61,7 @@ class Header extends Component {
                     <div className="col coluna_carrinho">
                         <div className="carrinho">
                             <img className="img_carrinho" src={carrinho} alt=""/>
-                            <Link to="/carrinho" className="texto_carrinho">
+                            <Link to="/carrinho" className="texto_carrinho" onClick={this.onClick}>
                                 Meu Carrinho
                                 <span className="badge badge-danger badge-pill">{this.state.qtd_carrinho}</span>    
                             </Link>
