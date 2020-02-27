@@ -14,20 +14,14 @@ class Card extends Component {
             ano: '',
             situacao: '',
             preco: 0,
-            total: 0,
-            qtd_livros: 0,
-            carrinho: [{
-                nome_livro: '',
-                valor: 0
-            }]
+            total: 0
         }
 
-        this.qtd_livrosAdd = 0
         this.livros = []
         this.onClick = this.onClick.bind(this)
     }
 
-    UNSAFE_componentWillMount(){
+    componentDidMount(){
         const livro = this.props.livro
         let book = livro.imagem
 
@@ -42,18 +36,35 @@ class Card extends Component {
         })
     }
 
-    onClick(){
+    onClick() {
         let titulo = this.state.titulo
         let preco = this.state.preco
 
-        let vet_livros = JSON.parse(localStorage.getItem('livros'))
-        if(vet_livros)
-            vet_livros[vet_livros.length] = {titulo: titulo, valor: preco}
-        else
-            vet_livros = [{titulo: titulo, valor: preco}]
+        let vet_livros =  []
+        vet_livros = JSON.parse(localStorage.getItem('livros'))
+        let vet_auxiliar = []
+        
+        if(vet_livros){
+            const existeTitulo = vet_livros.filter(livro => livro.titulo === titulo)
+
+            if(existeTitulo.length){
+                const index = vet_livros.findIndex(livro => livro.titulo === titulo)
+                vet_auxiliar = [...vet_livros.slice(0, index),  {...vet_livros[index], qtd: vet_livros[index].qtd+1}, ...vet_livros.slice(index+1)]
+                vet_livros = vet_auxiliar
+            }
+            else{
+                vet_livros.push({titulo: titulo, valor: preco, qtd: 1})
+            }
+        }
+        else {
+            vet_livros = [{titulo: titulo, valor: preco, qtd: 1}]
+        }
 
         localStorage.setItem('livros', JSON.stringify(vet_livros))
-        this.props.func(vet_livros.length)
+        this.props.func(vet_livros.reduce((aux, livro) => {
+            aux = aux + livro.qtd
+            return aux
+        }, 0))
     }
 
     render(){ 

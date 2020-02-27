@@ -44,6 +44,8 @@ class Carrinho extends Component {
 
     onClickFinalizar() {
         alert('Compra finalizada com sucesso!')
+        
+        localStorage.removeItem('livros')
         window.location.href = '/livraria'
     }
 

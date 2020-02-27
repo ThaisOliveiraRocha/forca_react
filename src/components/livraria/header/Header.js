@@ -21,11 +21,13 @@ class Header extends Component {
     }
 
     componentDidMount(){
-        const vet_carrinho = livros
         let tam = 0
 
-        if(vet_carrinho)
-            tam = vet_carrinho.length
+        if(livros)
+            tam =livros.reduce((aux, livro) => {
+                aux = aux + livro.qtd
+                return aux
+            }, 0)
 
         this.setState({
             qtd_carrinho: tam
