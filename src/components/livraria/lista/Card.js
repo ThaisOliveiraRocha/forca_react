@@ -9,7 +9,7 @@ class Card extends Component {
         this.state = {
             imagem: '',
             titulo: '',
-            sinopse: '',
+            genero: '',
             autor: '',
             ano: '',
             situacao: '',
@@ -28,7 +28,7 @@ class Card extends Component {
         this.setState({
             imagem: require('../images/'+book),
             titulo: livro.titulo,
-            sinopse: livro.sinopse,
+            genero: livro.genero,
             autor: livro.autor,
             ano: livro.ano,
             situacao: livro.situacao,
@@ -68,24 +68,20 @@ class Card extends Component {
     }
 
     render(){ 
+        const {livro} = this.props
+        console.log("livros", livro)
         return(
             <div className="card col-sm-3">
-                <img src={this.state.imagem} className="imagem card-img-top align-self-center" alt=""/>
+                <img src={require(`../images/${livro.imagem}`)} className="imagem card-img-top align-self-center" alt=""/>
                 <div className="card-body">
-                    <h5 className="card-title" ref="titulo">{this.state.titulo}</h5>
+                    <h5 className="card-title" ref="titulo">{livro.titulo}</h5>
                 </div>
                 <ul className="list-group list-group-flux">
-                    <li className="list-group-item">{this.state.autor}</li>
-                    <li className="list-group-item">{this.state.ano}</li>
-                    <a href="#" className="list-group-item list-group-item-action">
-                        <div className="d-flex w-100 justify-content-between">
-                            <h5 className="text-muted">Sinopse</h5>
-                        </div>
-                        <p className="text-muted">{this.state.sinopse}</p>
-                    </a>
-
-                    <li className="list-group-item" ref="preco">R$ {this.state.preco}</li>
-                    <li className="list-group-item">{this.state.situacao}</li>
+                    <li className="list-group-item">{livro.autor}</li>
+                    <li className="list-group-item">{livro.ano}</li>
+                    <li className="list-group-item">{livro.genero}</li>
+                    <li className="list-group-item" ref="preco">R$ {livro.preco}</li>
+                    <li className="list-group-item">{livro.situacao}</li>
                 </ul>
                 <div className="card-body align-self-center">
                     <button className="btn btn_card" type="submit" onClick={this.onClick}>Comprar</button>

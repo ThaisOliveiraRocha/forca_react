@@ -82,3 +82,10 @@ a:link, a:visited, a:hover{
 .badge {
     margin-left: 1em;
 }
+
+.pesquisar {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2em;
+}

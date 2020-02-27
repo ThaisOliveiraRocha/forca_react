@@ -2,7 +2,7 @@
     {
         "imagem": "book1.png",
         "titulo": "É Assim Que Acaba",
-        "sinopse": "asdfasdfasdgasdfasdf",
+        "genero": "romance",
         "autor": "Colleen Hoover",
         "ano": "2018",
         "situacao": "novo",
@@ -11,7 +11,7 @@
     {
         "imagem": "book2.png",
         "titulo": "Tarde Demais",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "drama",
         "autor": "Colleen Hoover",
         "ano": "2016",
         "situacao": "usado",
@@ -20,7 +20,7 @@
     {
         "imagem": "book3.png",
         "titulo": "Neuromancer",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "ficção cientifica",
         "autor": "William Gibson",
         "ano": "2010",
         "situacao": "novo",
@@ -29,7 +29,7 @@
     {
         "imagem": "book4.png",
         "titulo": "It - A coisa",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "terror",
         "autor": "Stephen King",
         "ano": "1990",
         "situacao": "usado",
@@ -38,25 +38,16 @@
     {
         "imagem": "book5.png",
         "titulo": "Game of Thrones",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "fantasia",
         "autor": "George Martin",
         "ano": "2000",
         "situacao": "novo",
         "preco": "25.00"
-    },
-    {
-        "imagem": "book1.png",
-        "titulo": "É Assim Que Acaba",
-        "sinopse": "asdfasdfasdgasdfasdf",
-        "autor": "Colleen Hoover",
-        "ano": "2018",
-        "situacao": "novo",
-        "preco": "40.00"
     },
     {
         "imagem": "book2.png",
         "titulo": "Tarde Demais",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "drama",
         "autor": "Colleen Hoover",
         "ano": "2016",
         "situacao": "usado",
@@ -65,7 +56,7 @@
     {
         "imagem": "book3.png",
         "titulo": "Neuromancer",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "ficção cientifica",
         "autor": "William Gibson",
         "ano": "2010",
         "situacao": "novo",
@@ -74,28 +65,10 @@
     {
         "imagem": "book4.png",
         "titulo": "It - A coisa",
-        "sinopse": "afadsfasdfasdfasd",
+        "genero": "terror",
         "autor": "Stephen King",
         "ano": "1990",
         "situacao": "usado",
         "preco": "29.50"
-    },
-    {
-        "imagem": "book5.png",
-        "titulo": "Game of Thrones",
-        "sinopse": "afadsfasdfasdfasd",
-        "autor": "George Martin",
-        "ano": "2000",
-        "situacao": "novo",
-        "preco": "25.00"
-    },
-    {
-        "imagem": "book1.png",
-        "titulo": "É Assim Que Acaba",
-        "sinopse": "asdfasdfasdgasdfasdf",
-        "autor": "Colleen Hoover",
-        "ano": "2018",
-        "situacao": "novo",
-        "preco": "40.00"
     }
 ]
