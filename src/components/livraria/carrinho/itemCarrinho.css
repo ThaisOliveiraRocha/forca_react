@@ -32,6 +32,22 @@ html, body {
     text-align: right;
 }
 
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    width: 100%;
+
+    font-size: 1.2em;
+}
+
+.lixeira{
+    width: 1.5em;
+    
+}
+
 .item {
     display: flex;
     align-items: center;
@@ -51,7 +67,7 @@ html, body {
     width: 30%;
 }
 
-.btnLista {
+.quantidade {
     width: 20%;
 }
 
@@ -64,7 +80,7 @@ html, body {
 }
 
 .btnFuncao {
-    width: 2em;
+    width: 6em;
     margin-left: 1em;
 }
 

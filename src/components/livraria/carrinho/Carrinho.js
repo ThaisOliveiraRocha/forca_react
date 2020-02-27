@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import Header from '../header/Header'
 import ItemCarrinho from '../carrinho/ItemCarrinho'
 import './itemCarrinho.css'
+import lixeiraIcone from '../images/excluir.png'
 
 class Carrinho extends Component {
     constructor(props){
@@ -10,7 +11,8 @@ class Carrinho extends Component {
         this.state = {
             vet_carrinho: [{
                 titulo: '',
-                valor: 0
+                valor: 0,
+                qtd: 0
             }],
             total_compra: 0
         }
@@ -23,7 +25,8 @@ class Carrinho extends Component {
         let vet_livros = []
         let carrinho = [{
             titulo: '',
-            preco: ''
+            preco: '',
+            qtd: 0
         }]
         vet_livros = JSON.parse(localStorage.getItem('livros'))
         let soma = 0
@@ -31,9 +34,12 @@ class Carrinho extends Component {
         for(let index=0; index < vet_livros.length; index++){
             carrinho[index] = {
                 titulo:  vet_livros[index].titulo,
-                preco: vet_livros[index].valor
+                preco: vet_livros[index].valor,
+                qtd: vet_livros[index].qtd
             }
-            soma += parseFloat(vet_livros[index].valor)
+            let valItem = parseFloat(vet_livros[index].valor)
+            let qtdItens = parseFloat(vet_livros[index].qtd)
+            soma += (valItem * qtdItens)
         }
 
         this.setState({
@@ -44,7 +50,7 @@ class Carrinho extends Component {
 
     onClickFinalizar() {
         alert('Compra finalizada com sucesso!')
-        
+
         localStorage.removeItem('livros')
         window.location.href = '/livraria'
     }
@@ -63,14 +69,21 @@ class Carrinho extends Component {
                     <Header />
                 </div>
                 <div className="corpoCarrinho list-group">
-                    {
-                        this.state.vet_carrinho.map((item, index) => 
-                            <ItemCarrinho
-                                item={item}
-                                key={index}
-                            />
-                        )
-                    }
+                    <div className="cabecalho list-group-item">
+                        <span>Título</span>
+                        <span>Preço</span>
+                        <span>Quantidade</span>
+                        <img src = {lixeiraIcone} className="lixeira"/>
+                    </div>
+                        {
+                            this.state.vet_carrinho.map((item, index) => 
+                                <ItemCarrinho
+                                    item={item}
+                                    key={index}
+                                />
+                            )
+                        }
+                    
                 </div>
                 <div className="footer">
                     <div className="textoTotal">
